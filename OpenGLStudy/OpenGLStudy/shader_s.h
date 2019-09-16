@@ -1,13 +1,13 @@
 //
-//  shade.cpp
+//  shader_s.h
 //  OpenGLStudy
 //
-//  Created by cpo007@qq.com on 2019/9/11.
+//  Created by cpo007@qq.com on 2019/9/16.
 //  Copyright © 2019 cpo007@qq.com. All rights reserved.
 //
 
-//#ifndef SHADER_H
-//#define SHADER_H
+#ifndef shader_s_h
+#define shader_s_h
 
 #include <glad/glad.h>
 
@@ -16,6 +16,7 @@
 #include <sstream>
 #include <iostream>
 
+using std::cout;
 using std::string;
 using std::ifstream;
 using std::stringstream;
@@ -28,15 +29,22 @@ public:
     Shader(const char* vertexPath, const char* fragmentPath) {
         string vertexCode;
         string fragmentCode;
-        ifstream vShaderFile;
-        ifstream fShaderFile;
+        ifstream vShaderFile(vertexPath);
+        ifstream fShaderFile(fragmentPath);
+        
+        if (!vShaderFile.is_open()) {
+            cout << "Error opening file";
+            exit (1);
+        }
+        if (!fShaderFile.is_open()) {
+            cout << "Error opening file";
+            exit (1);
+        }
         
         vShaderFile.exceptions(ifstream::failbit | ifstream::badbit);
         fShaderFile.exceptions(ifstream::failbit | ifstream::badbit);
         
         try {
-            vShaderFile.open(vertexPath);
-            fShaderFile.open(fragmentPath);
             stringstream vShaderStream;
             vShaderStream << vShaderFile.rdbuf();
             stringstream fShaderStream;
@@ -47,7 +55,7 @@ public:
             vertexCode = vShaderStream.str();
             fragmentCode = fShaderStream.str();
         } catch (ifstream::failure e) {
-            std::cout << "ERROR::SHADER::FILE_NOT_SUCCESFULLY_READ" << std::endl;
+`            std::cout << "ERROR::SHADER::FILE_NOT_SUCCESFULLY_READ" << std::endl;
         }
         
         const char* vShaderCode = vertexCode.c_str();
@@ -63,7 +71,7 @@ public:
         glShaderSource(fragment,1,&fShaderCode,NULL);
         glCompileShader(fragment);
         checkCompileErrors(fragment, "FRAGMENT");
-
+        
         
         ID = glCreateProgram();
         glAttachShader(ID,vertex);
@@ -117,3 +125,6 @@ private:
     
     
 };
+
+
+#endif /* shader_s_h */
