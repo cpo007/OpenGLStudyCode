@@ -14,6 +14,8 @@
 		3805B0832324FA4100C5A605 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 3805B0822324FA4100C5A605 /* glad.c */; };
 		3855C4CA232F77670012CDD7 /* fs_shader.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3855C4C8232F77670012CDD7 /* fs_shader.txt */; };
 		3855C4CB232F77670012CDD7 /* vs_shader.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3855C4C9232F77670012CDD7 /* vs_shader.txt */; };
+		3855C4CE23307F3F0012CDD7 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3855C4CD23307F3F0012CDD7 /* stb_image.cpp */; };
+		3855C4D023307FDD0012CDD7 /* container.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3855C4CF23307FDD0012CDD7 /* container.jpg */; };
 		389887552324F883007A2A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 389887542324F883007A2A78 /* Assets.xcassets */; };
 		389887582324F883007A2A78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 389887562324F883007A2A78 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,9 @@
 		3805B0822324FA4100C5A605 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
 		3855C4C8232F77670012CDD7 /* fs_shader.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fs_shader.txt; sourceTree = "<group>"; };
 		3855C4C9232F77670012CDD7 /* vs_shader.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vs_shader.txt; sourceTree = "<group>"; };
+		3855C4CC23307EAF0012CDD7 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		3855C4CD23307F3F0012CDD7 /* stb_image.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
+		3855C4CF23307FDD0012CDD7 /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
 		3898874B2324F881007A2A78 /* OpenGLStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGLStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		389887542324F883007A2A78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		389887572324F883007A2A78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,12 +85,15 @@
 			children = (
 				389887542324F883007A2A78 /* Assets.xcassets */,
 				389887562324F883007A2A78 /* Main.storyboard */,
+				3855C4CC23307EAF0012CDD7 /* stb_image.h */,
+				3855C4CD23307F3F0012CDD7 /* stb_image.cpp */,
 				3855C4C8232F77670012CDD7 /* fs_shader.txt */,
 				3855C4C9232F77670012CDD7 /* vs_shader.txt */,
 				3805B0822324FA4100C5A605 /* glad.c */,
 				389887592324F883007A2A78 /* Info.plist */,
 				3805B07E2324FA1600C5A605 /* main.cpp */,
 				38CB4A40232F34B80046BC79 /* shader_s.h */,
+				3855C4CF23307FDD0012CDD7 /* container.jpg */,
 				3898875C2324F883007A2A78 /* OpenGLStudy.entitlements */,
 			);
 			path = OpenGLStudy;
@@ -151,6 +159,7 @@
 				3855C4CA232F77670012CDD7 /* fs_shader.txt in Resources */,
 				389887552324F883007A2A78 /* Assets.xcassets in Resources */,
 				3855C4CB232F77670012CDD7 /* vs_shader.txt in Resources */,
+				3855C4D023307FDD0012CDD7 /* container.jpg in Resources */,
 				389887582324F883007A2A78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3855C4CE23307F3F0012CDD7 /* stb_image.cpp in Sources */,
 				3805B07F2324FA1600C5A605 /* main.cpp in Sources */,
 				3805B0832324FA4100C5A605 /* glad.c in Sources */,
 			);
